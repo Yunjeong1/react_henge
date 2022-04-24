@@ -20,7 +20,7 @@ function Youtube() {
 					let tit = item.snippet.title;
 					if (tit.length > 15) tit = tit.substr(0, 15) + '..';
 					return (
-						<div className='inner'>
+						<div className='inner' key={idx}>
 							<article
 								key={idx}
 								onClick={() => {

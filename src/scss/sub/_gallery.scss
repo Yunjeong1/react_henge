@@ -22,6 +22,7 @@
 				border: none;
 				border-bottom: 3px solid #fff !important;
 				background: transparent;
+				color: #fff;
 				&:focus {
 					outline: none;
 				}
@@ -32,7 +33,9 @@
 			}
 			.btnSearch {
 				margin-left: 5px;
+
 				.fa-magnifying-glass {
+					display: block !important;
 					font-size: 25px;
 					color: #fff;
 					cursor: pointer;
@@ -40,18 +43,9 @@
 			}
 		}
 
-		.wrap {
+		.pics {
 			width: 100%;
-			overflow: hidden;
 			position: relative;
-			transform: translateY(200px);
-			opacity: 0;
-			transition: 1s;
-
-			&.on {
-				transform: translateY(0px);
-				opacity: 1;
-			}
 
 			&::after {
 				content: '';
@@ -59,15 +53,15 @@
 				clear: both;
 			}
 
-			article {
-				width: calc(100% / 4);
+			li {
+				width: calc(100% / 3);
+				height: 100%;
 				float: left;
-				padding: 10px;
-				box-sizing: border-box;
+				padding: 20px;
+				margin-bottom: 100px;
 
 				> .inner {
 					width: 100%;
-					padding: 10px;
 					box-sizing: border-box;
 					position: relative;
 
@@ -78,33 +72,21 @@
 
 						img {
 							width: 100%;
-							transition: 0.3s;
+							height: 100%;
+							object-fit: cover;
+							transition: 0.5s;
 						}
 					}
-					p {
-						font: 12px/1.2 'arial';
-						color: #777;
-					}
-					.text {
-						position: absolute;
-						bottom: -20px;
-						left: 20px;
-						opacity: 0;
-						transition: 0.4s;
-						p {
-							padding: 0;
-							text-align: left;
-							font: 15px/1.1 'arial';
-							color: #fff;
-						}
-						span {
-							font: 12px/1 'arial';
-							color: #999;
-						}
+
+					h2 {
+						font: 22px/1 'Helvetica 25 UltraLight';
+						color: #fff;
+						text-align: center;
+						margin-top: 10px;
 					}
 					&:hover {
 						img {
-							filter: grayscale(0.5);
+							filter: grayscale(100%);
 						}
 						.text {
 							position: absolute;
@@ -148,31 +130,9 @@
 				}
 			}
 
-			.wrap {
-				article {
-					width: calc(100% / 3);
-
-					> .inner {
-						.text {
-							position: absolute;
-							bottom: -20px;
-							left: 10px;
-							opacity: 0;
-							transition: 0.4s;
-							p {
-								font: 12px/1 'arial';
-							}
-							span {
-								font: 10px/1 'arial';
-							}
-						}
-						&:hover {
-							.text {
-								bottom: 15px;
-								left: 15px;
-							}
-						}
-					}
+			.pics {
+				li {
+					width: calc(100% / 2);
 				}
 			}
 		}
@@ -186,8 +146,11 @@
 		}
 		> .inner {
 			padding: 0px;
+			min-height: 0;
+			margin-top: 0;
 
 			#searchBox {
+				margin-top: 0;
 				#search {
 					width: 40%;
 
@@ -204,9 +167,9 @@
 				}
 			}
 
-			.wrap {
-				article {
-					width: calc(100% / 2);
+			.pics {
+				li {
+					width: calc(100% / 1);
 
 					> div {
 						min-height: auto;

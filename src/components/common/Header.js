@@ -49,7 +49,7 @@ function Header(props) {
 								</li>
 								<li>
 									<NavLink to='/join' activeStyle={active}>
-										Join Life
+										Join Us
 									</NavLink>
 								</li>
 							</div>

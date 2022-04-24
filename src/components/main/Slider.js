@@ -10,14 +10,16 @@ const path = process.env.PUBLIC_URL;
 function Slider() {
 	return (
 		<section id='slider' className='myScroll'>
-			<h1>Green Project With ZARA</h1>
+			<h1>Projects that we made</h1>
 			<Swiper
 				spaceBetween={30}
-				slidesPerView={4}
-				navigation={true}
+				slidesPerView={2}
+				loop={false}
 				scrollbar={{
 					hide: false,
 				}}
+				navigation={true}
+				modules={[Scrollbar, Navigation]}
 				breakpoints={{
 					0: {
 						slidesPerView: 1,
@@ -31,8 +33,7 @@ function Slider() {
 						slidesPerView: 4,
 						spaceBetween: 30,
 					},
-				}}
-				modules={[Navigation, Scrollbar]}>
+				}}>
 				<SwiperSlide>
 					<img src={`${path}/img/solution1.jpg`} alt='pic1' />
 				</SwiperSlide>
@@ -43,10 +44,10 @@ function Slider() {
 					<img src={`${path}/img/solution3.jpg`} alt='pic3' />
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/solution4.jpg`} alt='pic4' />
+					<img src={`${path}/img/solution5.jpg`} alt='pic4' />
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/solution5.jpg`} alt='pic5' />
+					<img src={`${path}/img/solution8.jpg`} alt='pic5' />
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={`${path}/img/solution6.jpg`} alt='pic6' />
@@ -55,7 +56,7 @@ function Slider() {
 					<img src={`${path}/img/solution7.jpg`} alt='pic7' />
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={`${path}/img/solution8.jpg`} alt='pic8' />
+					<img src={`${path}/img/solution4.jpg`} alt='pic8' />
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={`${path}/img/solution9.jpg`} alt='pic9' />

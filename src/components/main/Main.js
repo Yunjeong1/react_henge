@@ -56,11 +56,11 @@ function Main() {
 	return (
 		<main ref={main} id='main'>
 			<Visual />
-			<View />
-			<Collection />
-			<Vids />
+			{/* <Collection /> */}
 			<News />
-			<Pics />
+			<View />
+			<Vids />
+			{/* <Pics /> */}
 			<Slider />
 			<Btns idx={setIndex} />
 		</main>

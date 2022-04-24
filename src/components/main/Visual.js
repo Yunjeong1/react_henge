@@ -5,7 +5,7 @@ function Visual() {
 
 	return (
 		<figure id='visual' className='myScroll'>
-			<video autoPlay loop muted frameborder='0'>
+			<video autoPlay loop muted frameBorder='0'>
 				<source src={`${path}/img/henge.mp4`} type='video/mp4' />
 			</video>
 			<div className='inner'>
