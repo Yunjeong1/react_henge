@@ -4,13 +4,7 @@
 	.inner {
 		width: 1180px;
 		position: relative;
-		h2 {
-			font: 30px/1 'arial';
-			font-weight: 500;
-			color: #000;
-			letter-spacing: 1px;
-			padding: 100px 0 50px;
-		}
+
 		.cover {
 			width: 100%;
 			display: flex;
@@ -18,8 +12,7 @@
 			.inputBox {
 				width: 35%;
 				height: 280px;
-				border: 1px solid #bbb;
-				background: #f2f2f2;
+				background: #fff;
 				margin-right: 10%;
 				display: flex;
 				justify-content: flex-start;
@@ -34,7 +27,7 @@
 					height: 50px;
 					border: none;
 					background: none;
-					border-bottom: 1px solid #bbb;
+					border-bottom: 1px solid #aaa;
 				}
 				.cont {
 					resize: none;
@@ -67,7 +60,7 @@
 
 				> article {
 					width: 100%;
-					border-top: 1px solid #bbb;
+					border-top: 1px solid #fff;
 					padding: 30px 0 30px 15px;
 					box-sizing: border-box;
 					display: flex;
@@ -78,26 +71,27 @@
 						width: 25%;
 						font: 20px/1 'noto sans kr';
 						font-weight: 400;
+						color: #fff;
 					}
 					p {
 						width: 55%;
 						padding: 0;
 						text-align: left;
 						font: 15px/1.2 'noto sans kr';
-						color: #000;
+						color: #fff;
 						letter-spacing: 0px;
 					}
 
 					&:last-child {
-						border-bottom: 1px solid #bbb;
+						border-bottom: 1px solid #fff;
 					}
 					&:hover {
-						background: #000;
+						background: #fff;
 
 						h3,
 						p,
 						button {
-							color: #fff;
+							color: #000;
 						}
 					}
 					.showCont {
@@ -112,13 +106,13 @@
 						background: none;
 						border: none;
 						font: 13px/30px 'noto sans kr';
-						color: #000;
+						color: #fff;
 						margin-left: 15px;
 						cursor: pointer;
 						transition: 0.3s;
 
 						&:hover {
-							color: #aaa;
+							color: #bbb;
 						}
 					}
 				}
@@ -148,7 +142,7 @@
 				height: 30px;
 				margin-left: 10vw;
 				font-size: 15px;
-				color: #333;
+				color: #fff;
 				background: transparent;
 				text-align: center;
 				line-height: 30px;
@@ -156,7 +150,7 @@
 				cursor: pointer;
 
 				&:hover {
-					color: #ccc;
+					color: #aaa;
 				}
 			}
 			.next {
@@ -165,14 +159,14 @@
 				height: 30px;
 				margin-right: 10vw;
 				font-size: 15px;
-				color: #333;
+				color: #fff;
 				background: transparent;
 				text-align: center;
 				line-height: 30px;
 				transition: 0.3s;
 				cursor: pointer;
 				&:hover {
-					color: #ccc;
+					color: #aaa;
 				}
 			}
 			.numbers {
@@ -183,27 +177,32 @@
 					width: 30px;
 					height: 30px;
 					font: 11px/30px 'arial';
-					color: #000;
-					border: 1px solid #333;
+					color: #aaa;
+					border: 1px solid #aaa;
 					margin: 0 5px;
 					transition: 0.5s;
 					&:hover {
-						background: #333;
-						color: #fff;
+						background: #fff;
+						color: #000;
 					}
 					&:nth-of-type(1) {
-						background: #333;
-						color: #fff;
+						background: #fff;
+						color: #000;
+						border: none;
 					}
 				}
 			}
 		}
 	}
 	.inner2 {
-		margin-top: 150px;
-		padding: 0px 0 100px;
+		margin-top: 100px;
+		padding: 0 0 100px;
+
 		h2 {
 			padding: 80px 0 50px;
+			font: 30px/1 'open sans';
+			font-weight: 400;
+			color: #fff;
 		}
 		.wrap::after {
 			content: '';
@@ -211,41 +210,17 @@
 			clear: both;
 		}
 		article {
-			width: 280px;
-			height: 300px;
-			margin-right: 20px;
-			margin-bottom: 20px;
+			width: 350px;
+			height: 400px;
+			margin-right: 60px;
+			margin-bottom: 200px;
 			float: left;
+			border-top: 1px solid #fff;
 			position: relative;
 			transition: all 0.2s;
-			&:hover {
-				&::after {
-					content: '';
-					display: block;
-					width: 100%;
-					height: 100%;
-					box-sizing: border-box;
-					position: absolute;
-					top: 0;
-					left: 0;
-					background: #000;
-					opacity: 0.3;
-					z-index: 1;
-					transition: all 0.3s;
-				}
-				& .text {
-					bottom: 100px;
-					left: 50px;
-					opacity: 1;
-					z-index: 10;
-					transition: all 0.3s;
-				}
-			}
+
 			.text {
-				position: absolute;
-				bottom: -200px;
-				left: 50px;
-				opacity: 0;
+				margin-top: 20px;
 				h4 {
 					font: 30px/1 'Cormorant Garamond';
 					color: #fff;
@@ -253,30 +228,17 @@
 				}
 				h5 {
 					display: block;
-					font: lighter 11px/1 'arial';
+					font: lighter 12px/1 'arial';
 					color: #fff;
 					letter-spacing: 0.2em;
+					margin-bottom: 20px;
 				}
 			}
 
-			&:nth-of-type(12):hover .text {
-				display: none;
-			}
-			&:nth-of-type(4n) {
+			&:nth-of-type(3n) {
 				margin-right: 0;
 			}
-			&:nth-of-type(9) {
-				margin-bottom: 0;
-			}
-			&:nth-of-type(10) {
-				margin-bottom: 0;
-			}
-			&:nth-of-type(11) {
-				margin-bottom: 0;
-			}
-			&:nth-of-type(12) {
-				margin-bottom: 0;
-			}
+
 			img {
 				width: 100%;
 				height: 100%;
@@ -285,19 +247,7 @@
 			}
 			h3 {
 				font: lighter 25px/1.2 'Cormorant Garamond';
-				color: #000;
-				margin-top: 35%;
-				padding-bottom: 30px;
-				padding-left: 30px;
-			}
-			a {
-				padding: 13px 23px;
-				font: 11px/1 'arial';
-				letter-spacing: 1.5px;
-				color: #000;
-				border: 1px solid #000;
-				position: absolute;
-				left: 30px;
+				color: #fff;
 			}
 		}
 	}

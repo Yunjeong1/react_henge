@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faFacebook,
 	faInstagram,
+	faLinkedin,
+	faPinterest,
+	faSpotify,
 	faTwitter,
+	faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
 const path = process.env.PUBLIC_URL;
@@ -16,31 +20,36 @@ function Footer(props) {
 				<div className='inner'>
 					<h1>
 						<NavLink exact to='/'>
-							<img src={`${path}/img/logo.png`} alt='logo' />
+							<img src={`${path}/img/henge_logo.png`} alt='logo' />
 						</NavLink>
 					</h1>
 
+					<address>
+						<div className='txt txt1'>Credits</div>
+						<div className='txt txt1'>Privacy</div>
+						<div className='txt'>P.IVA 04630340265 / Henge 2019</div>
+					</address>
+
 					<ul>
-						<li>
-							<FontAwesomeIcon icon={faFacebook} />
-						</li>
 						<li>
 							<FontAwesomeIcon icon={faInstagram} />
 						</li>
 						<li>
-							<FontAwesomeIcon icon={faTwitter} />
+							<FontAwesomeIcon icon={faFacebook} />
+						</li>
+						<li>
+							<FontAwesomeIcon icon={faYoutube} />
+						</li>
+						<li>
+							<FontAwesomeIcon icon={faPinterest} />
+						</li>
+						<li>
+							<FontAwesomeIcon icon={faLinkedin} />
+						</li>
+						<li>
+							<FontAwesomeIcon icon={faSpotify} />
 						</li>
 					</ul>
-
-					<address>
-						Address: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						qua 0504054
-						<br />
-						TEL : +82-2-332-1233
-						<br />
-						FAX : +82-2-332-2223
-					</address>
-					<p>Copyright &copy; 2022 ZARA All Right Reserved.</p>
 				</div>
 			</footer>
 		</>

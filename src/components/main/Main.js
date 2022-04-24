@@ -55,7 +55,6 @@ function Main() {
 
 	return (
 		<main ref={main} id='main'>
-			<Header type={'main'} logoSrc={`${path}/img/logo2.png`} />
 			<Visual />
 			<View />
 			<Collection />

@@ -2,7 +2,7 @@ import Layout from '../common/Layout';
 import { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCirclePlay, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Popup from '../common/Popup';
 
 function Youtube() {
@@ -18,27 +18,27 @@ function Youtube() {
 				{vidData.map((item, idx) => {
 					const date = item.snippet.publishedAt;
 					let tit = item.snippet.title;
-					if (tit.length > 39) tit = tit.substr(0, 39) + '...';
-
+					if (tit.length > 15) tit = tit.substr(0, 15) + '..';
 					return (
-						<article
-							key={idx}
-							onClick={() => {
-								setIndex(idx);
-								pop.current.open();
-							}}>
-							<div className='thumb'>
-								<div className='crop'>
-									<img src={item.snippet.thumbnails.high.url} />
-								</div>
-								<FontAwesomeIcon icon={faCirclePlay} />
-							</div>
+						<div className='inner'>
+							<article
+								key={idx}
+								onClick={() => {
+									setIndex(idx);
+									pop.current.open();
+								}}>
+								<div className='thumb'>
+									<div className='crop'>
+										<img src={item.snippet.thumbnails.maxres.url} />
+									</div>
 
-							<div className='con'>
-								<h2>{tit}</h2>
-								<p>{date.split('T')[0]}</p>
-							</div>
-						</article>
+									<div className='con'>
+										<h2>{tit}</h2>
+										<p>{date.split('T')[0]}</p>
+									</div>
+								</div>
+							</article>
+						</div>
 					);
 				})}
 			</Layout>

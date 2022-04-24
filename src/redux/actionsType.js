@@ -9,3 +9,9 @@ export const MEMBER = {
 	success: 'MEMBER_SUCCESS',
 	error: 'MEMBER_ERROR',
 };
+
+export const FLICKR = {
+	start: 'FLICKR_START',
+	success: 'FLICKR_SUCCESS',
+	error: 'FLICKR_ERROR',
+};

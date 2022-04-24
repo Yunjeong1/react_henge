@@ -1,21 +1,23 @@
 import { Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as types from './redux/actionsType';
-import { useEffect } from 'react';
 
 import './scss/style.scss';
-//common
+
+//common 컴포넌트
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
-//main
+
+//main 컴포넌트
 import Main from './components/main/Main';
-//sub
-import Community from './components/sub/Community';
-import Contact from './components/sub/Contact';
-import Gallery from './components/sub/Gallery';
-import Join from './components/sub/Join';
-import New from './components/sub/New';
+
+//sub 컴포넌트
 import Youtube from './components/sub/Youtube';
+import Gallery from './components/sub/Gallery';
+import Contact from './components/sub/Contact';
+import Join from './components/sub/Join';
+import Community from './components/sub/Community';
+import { useEffect } from 'react';
 
 const path = process.env.PUBLIC_URL;
 
@@ -23,19 +25,21 @@ function App() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch({ type: types.YOUTUBE.start });
 		dispatch({ type: types.MEMBER.start });
+		dispatch({ type: types.YOUTUBE.start });
+		// dispatch({ type: types.FLICKR.start, opt: { type: 'interest' } });
 	}, []);
 
 	return (
 		<>
 			<Switch>
 				<Route exact path='/'>
+					<Header type={'main'} logoSrc={`${path}/img/henge_logo.png`} />
 					<Main />
 				</Route>
 
 				<Route path='/'>
-					<Header type={'sub'} logoSrc={`${path}/img/logo.png`} />
+					<Header type={'sub'} logoSrc={`${path}/img/henge_logo.png`} />
 				</Route>
 			</Switch>
 
@@ -46,15 +50,7 @@ function App() {
 			<Route path='/community' component={Community} />
 			<Route path='/join' component={Join} />
 
-			<Switch>
-				<Route exact path='/'>
-					<Footer type={'main'} />
-				</Route>
-
-				<Route path='/'>
-					<Footer type={'sub'} />
-				</Route>
-			</Switch>
+			<Footer />
 		</>
 	);
 }

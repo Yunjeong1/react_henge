@@ -1,279 +1,34 @@
 #visual {
 	width: 100%;
-	height: 100vh;
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 5;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	z-index: 1;
 
-	.inner_1 {
-		background: #000;
+	video {
+		width: 100%;
+		height: 100%;
+		border: none;
 	}
 	.inner {
-		width: 50%;
-		height: 100%;
+		width: 1180px;
 
-		.wrap {
-			margin: 0 auto;
-
-			article {
-				width: 50%;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-		.wrap_1 {
-			article {
-				text-align: center;
-
-				h2 {
-					font: 55px/1 'Cormorant';
-					color: #a79990;
-					span {
-						font: 75px/1 'Cormorant';
-						color: #a79990;
-					}
-				}
-				p {
-					font: 16px/1 'work sans';
-					font-weight: 300;
-					color: #887d75;
-					margin-top: 20px;
-				}
-			}
-		}
-		.wrap_2 {
-			width: 100%;
-			article {
-				width: 50%;
-				height: auto;
-
-				.slider {
-					width: 50%;
-					height: 100%;
-					margin: 0px auto;
-					position: relative;
-					overflow: hidden;
-
-					.panel {
-						width: 300%;
-						height: 100%;
-						margin-left: -100%;
-
-						&::after {
-							content: '';
-							display: block;
-							clear: both;
-						}
-						li {
-							width: 33.3333%;
-							float: left;
-
-							img {
-								width: 100%;
-								height: 100%;
-								display: block;
-								object-fit: contain;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	.btnPrev {
-		width: 25px;
-		height: 25px;
-		position: absolute;
-		bottom: 2vw;
-		left: 20px;
-		transform: rotate(0deg);
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-
-		&::before {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: #fff;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: rotate(-30deg);
-			transform-origin: left center;
-			transition: 0.5s;
-		}
-		&::after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: #fff;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: rotate(30deg);
-			transform-origin: left center;
-			transition: 0.5s;
-		}
-		span {
-			font: 11px/1 'arial';
+		h1 {
+			font: 80px/1.2 'Playfair Display';
+			font-weight: 400;
+			letter-spacing: 1px;
 			color: #fff;
-			transform: translateX(100%) rotate(135deg);
-			opacity: 0;
-			transition: 0.5s;
-		}
-
-		&:hover {
-			span {
-				opacity: 1;
-				transform: translateX(0%);
-			}
-			&::before {
-				transform: rotate(-180deg);
-			}
-			&::after {
-				transform: rotate(180deg);
-			}
-		}
-	}
-	.btnNext {
-		width: 25px;
-		height: 25px;
-		position: absolute;
-		bottom: 2vw;
-		left: 80px;
-		transform: rotate(0deg);
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-
-		&::before {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: #fff;
 			position: absolute;
 			top: 50%;
-			left: 0;
-			transform: rotate(-30deg);
-			transform-origin: right center;
-			transition: 0.5s;
-		}
-		&::after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: #fff;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: rotate(30deg);
-			transform-origin: right center;
-			transition: 0.5s;
-		}
-		span {
-			font: 11px/1 'arial';
-			color: #fff;
-			transform: translateX(-100%) rotate(-135deg);
-			opacity: 0;
-			transition: 0.5s;
-		}
+			left: 31%;
+			transform: translate(-50%, -20%);
 
-		&:hover {
 			span {
-				opacity: 1;
-				transform: translateX(0%);
-			}
-			&::before {
-				transform: rotate(-180deg);
-			}
-			&::after {
-				transform: rotate(180deg);
+				margin-left: 10vw;
 			}
 		}
 	}
 }
 
 @media screen and (max-width: $tablet) {
-	#visual {
-		.inner {
-			.wrap_1 {
-				article {
-					h2 {
-						font: 5.5vmin/1 'Cormorant';
-						span {
-							font: 8vmin/1 'Cormorant';
-						}
-					}
-					p {
-						font: lighter 2vmin/1 'work sans';
-						margin-top: 10px;
-					}
-				}
-			}
-			.wrap_2 {
-				article {
-					.slider {
-						.panel li img {
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-						}
-						.btn {
-							.prev {
-								left: 5px;
-
-								.fa-chevron-left {
-									font-size: 20px;
-								}
-							}
-
-							.next {
-								right: 5px;
-								.fa-chevron-right {
-									font-size: 20px;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: $mobile) {
-	#visual {
-		.inner {
-			.wrap_2 {
-				article {
-					.slider {
-						.btn {
-							.prev {
-								left: 10px;
-								.fa-chevron-left {
-									font-size: 15px;
-								}
-							}
-							.next {
-								right: 10px;
-								.fa-chevron-right {
-									font-size: 15px;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }

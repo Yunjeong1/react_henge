@@ -1,7 +1,5 @@
 import Layout from '../common/Layout';
 import React, { useRef, useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
 	//email
@@ -72,26 +70,25 @@ function Contact() {
 
 	const info = [
 		{
-			title: '서울 잠실점',
-			address: '서울 롯데 잠실 올림픽로 240 롯데백화점',
+			title: 'SONGPA, KOREA',
+			address: 'PADOVA',
+			city: 'VIA DAVILA, 15-19',
+			post: '35137',
+			email: 'Email: info@arredodalpozzo.it',
 			latlng: new kakao.maps.LatLng(37.51199745517824, 127.09855357200387),
-			imgSrc: `${path}/img/marker.png`,
+			imgSrc: `${path}/img/pin.png`,
 			imgSize: new kakao.maps.Size(40, 64),
 			imgPos: { offset: new kakao.maps.Point(20, 64) },
 		},
+
 		{
-			title: '서울 강남점',
-			address: '서울 강남대로 447 남서울빌딩',
-			latlng: new kakao.maps.LatLng(37.50217213555704, 127.02516882411847),
-			imgSrc: `${path}/img/marker.png`,
-			imgSize: new kakao.maps.Size(40, 64),
-			imgPos: { offset: new kakao.maps.Point(20, 99) },
-		},
-		{
-			title: '서울 명동점',
-			address: '서울 명동 8길 27 엠플라자',
+			title: 'MYEONGDONG, KOREA',
+			address: 'VICENZA ',
+			city: 'VIA GIUSEPPE MAZZINI, 24',
+			post: '36040',
+			email: 'Email: info@arredodalpozzo.it',
 			latlng: new kakao.maps.LatLng(37.56250041835499, 126.98516157408622),
-			imgSrc: `${path}/img/marker.png`,
+			imgSrc: `${path}/img/pin.png`,
 			imgSize: new kakao.maps.Size(40, 64),
 			imgPos: { offset: new kakao.maps.Point(20, 64) },
 		},
@@ -153,7 +150,7 @@ function Contact() {
 
 	return (
 		<Layout name={'Contact'} num={'03'}>
-			{success ? <h3>전송이 성공적으로 완료되었습니다!</h3> : null}
+			{/* {success ? <h3>전송이 성공적으로 완료되었습니다!</h3> : null}
 			<div className='inner inner1'>
 				<h2>
 					Email us,
@@ -246,10 +243,9 @@ function Contact() {
 						</table>
 					</fieldset>
 				</form>
-			</div>
+			</div> */}
 
 			<div className='inner inner2'>
-				<h2>Find us</h2>
 				<div id='map' ref={container}></div>
 				<div className='branch' ref={branch}>
 					{mapInfo.map((info, idx) => {
@@ -259,17 +255,15 @@ function Contact() {
 								onClick={() => {
 									setIndex(idx);
 								}}>
-								<h3>{info.title}</h3>
-								<p>{info.address}</p>
-								<p>
-									<FontAwesomeIcon icon={faPhone} />
-									02-536-2795
-								</p>
-								<p>
-									<FontAwesomeIcon icon={faClock} />
-									10am-10pm
-								</p>
-								<div id='a'>위치보기</div>
+								<div className='info'>
+									<h3>{info.title}</h3>
+									<div className='add'>
+										<p>{info.address}</p>
+										<p>{info.city}</p>
+										<p>{info.post}</p>
+										<p>{info.email}</p>
+									</div>
+								</div>
 							</article>
 						);
 					})}

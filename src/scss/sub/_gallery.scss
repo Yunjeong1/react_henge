@@ -20,21 +20,21 @@
 				width: 20%;
 				height: 50px;
 				border: none;
-				border-bottom: 3px solid #444 !important;
+				border-bottom: 3px solid #fff !important;
 				background: transparent;
 				&:focus {
 					outline: none;
 				}
 				&::placeholder {
 					font: 15px/1 'noto sans kr';
-					color: #444;
+					color: #fff;
 				}
 			}
 			.btnSearch {
 				margin-left: 5px;
 				.fa-magnifying-glass {
 					font-size: 25px;
-					color: #444;
+					color: #fff;
 					cursor: pointer;
 				}
 			}

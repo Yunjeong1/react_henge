@@ -12,7 +12,6 @@
 			margin-bottom: 30px;
 		}
 		width: 1180px;
-		margin: 50px auto;
 		position: relative;
 	}
 
@@ -125,11 +124,12 @@
 	.inner2 {
 		position: relative;
 		width: 1180px;
+		margin-bottom: 100px;
 		#map {
 			width: 100%;
 			height: 450px;
 			margin: 0px auto 40px;
-			filter: grayscale(100%);
+			filter: grayscale(100%) brightness(90%);
 		}
 
 		.branch {
@@ -142,80 +142,51 @@
 				clear: both;
 			}
 			article {
-				width: 380px;
-				height: 290px;
+				width: 50%;
+				height: 200px;
 				float: left;
-				margin-right: 20px;
-				text-align: center;
-				border: 1px solid #666;
-				padding: 35px 20px 40px;
-				box-sizing: border-box;
+				padding: 30px 30px 30px 0;
+				background: #ddd;
+				border-right: 1px solid #000;
 				position: relative;
 				transition: background-color 0.5s;
 				&.on {
-					background-color: #000;
-					border: none;
-
-					h3,
-					p {
-						color: #fff;
-					}
-					.fa-phone,
-					.fa-clock {
-						color: #bbb;
-					}
-					#a {
-						background: #fff;
-						color: #000;
-
-						&:hover {
-							border: none;
-							box-sizing: border-box;
-							font: 13px/45px 'noto sans kr';
-						}
-					}
+					background-color: #fff;
 				}
 				&:last-child {
 					margin-right: 0;
 				}
-				h3 {
-					font: bold 20px/1 'noto sans kr';
-					padding: 0;
-					margin-bottom: 30px;
-				}
-				p {
-					padding: 0;
-					font: 15px/1.2 'noto sans kr';
-					letter-spacing: 0.5px;
-					margin-bottom: 10px;
-					.fa-phone,
-					.fa-clock {
-						margin-right: 15px;
-						color: #555;
-						font-size: 13px;
+
+				.info {
+					display: flex;
+					justify-content: space-around;
+					> h3 {
+						display: inline-block;
+						font: 23px/1 'Helvetica 25 UltraLight';
+						letter-spacing: 0;
+						cursor: pointer;
+						&::after {
+							content: '';
+							display: block;
+							width: 100%;
+							border-bottom: 2px solid #000;
+						}
 					}
 				}
-				#a {
-					position: absolute;
-					bottom: 15%;
-					left: 50%;
-					transform: translateX(-50%);
-					display: inline-block;
-					width: 150px;
-					height: 45px;
-					background: #000;
-					color: #fff;
-					border-radius: 50px;
-					font: 13px/45px 'noto sans kr';
-					cursor: pointer;
-					transition: background-color 0.3s;
+				.add {
+					> p {
+						padding: 0 !important;
+						display: block;
+						font: 17px/1.1 'Helvetica 25 UltraLight';
+						letter-spacing: 0;
+						text-align: left;
 
-					&:hover {
-						border: 2px solid #000;
-						box-sizing: border-box;
-						background-color: #fff;
-						color: #000;
-						font: 13px/42px 'noto sans kr';
+						&:first-child {
+							margin-top: 5px;
+						}
+						&:last-child {
+							margin-top: 40px;
+						}
 					}
 				}
 			}

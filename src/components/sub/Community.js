@@ -95,8 +95,6 @@ function Community() {
 	return (
 		<Layout name={'Community'} num={'05'}>
 			<div className='inner inner1'>
-				<h2>FAQs</h2>
-
 				<div className='cover'>
 					<div className='inputBox'>
 						<input
@@ -179,11 +177,11 @@ function Community() {
 					{members.map((member, idx) => {
 						return (
 							<article key={idx}>
-								<img src={`${path}/img/${member.pic}`} alt={`member ${idx}`} />
 								<div className='text'>
 									<h4>{member.name}</h4>
 									<h5>{member.position}</h5>
 								</div>
+								<img src={`${path}/img/${member.pic}`} alt={`member ${idx}`} />
 							</article>
 						);
 					})}
