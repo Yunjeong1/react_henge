@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "name": "Craig Berry",
+      "position": "CEO",
+      "pic": "team-img-1.jpg"
+    },
+    {
+      "name": "Tina Bloom",
+      "position": "Vice President",
+      "pic": "team-img-2.jpg"
+    },
+    {
+      "name": "Carol West",
+      "position": "Designer",
+      "pic": "team-img-3.jpg"
+    },
+    {
+      "name": "Emily Ian",
+      "position": "Store manager",
+      "pic": "team-img-4.jpg"
+    },
+    {
+      "name": "Tom Camden",
+      "position": "Marketing Manager",
+      "pic": "team-img-5.jpg"
+    },
+    {
+      "name": "Emma Aman",
+      "position": "CS Manager",
+      "pic": "team-img-6.jpg"
+    },
+    {
+      "name": "Coming Soon!",
+      "position": "",
+      "pic": "team-img-0.jpg"
+    },
+    {
+      "name": "Paul West",
+      "position": "Front-end Dev",
+      "pic": "team-img-8.jpg"
+    },
+    {
+      "name": "Susan Bailey",
+      "position": "Back-end Dev",
+      "pic": "team-img-9.jpg"
+    },
+    {
+      "name": "Rob Jackson",
+      "position": "Web Designer",
+      "pic": "team-img-10.jpg"
+    },
+    {
+      "name": "Ashely Kim",
+      "position": "CS Manager",
+      "pic": "team-img-7.jpg"
+    },
+    {
+      "name": "",
+      "position": "",
+      "pic": "team-img-11.jpg"
+    }
+  ]
+}
