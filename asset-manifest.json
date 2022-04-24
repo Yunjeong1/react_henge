@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_henge/static/css/main.610dcfa8.css",
+    "main.js": "/react_henge/static/js/main.61fc8f6a.js",
+    "index.html": "/react_henge/index.html",
+    "main.610dcfa8.css.map": "/react_henge/static/css/main.610dcfa8.css.map",
+    "main.61fc8f6a.js.map": "/react_henge/static/js/main.61fc8f6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.610dcfa8.css",
+    "static/js/main.61fc8f6a.js"
+  ]
+}

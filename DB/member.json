@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "name": "Craig Berry",
+      "position": "CEO",
+      "pic": "member1.jpg"
+    },
+    {
+      "name": "Tina Bloom",
+      "position": "Vice President",
+      "pic": "member2.jpg"
+    },
+    {
+      "name": "Carol West",
+      "position": "Designer",
+      "pic": "member3.jpg"
+    },
+    {
+      "name": "Emily Ian",
+      "position": "Designer",
+      "pic": "member4.jpg"
+    },
+    {
+      "name": "Tom Camden",
+      "position": "Marketing Manager",
+      "pic": "member5.jpg"
+    },
+    {
+      "name": "Emma Aman",
+      "position": "CS Manager",
+      "pic": "member6.jpg"
+    }
+  ]
+}

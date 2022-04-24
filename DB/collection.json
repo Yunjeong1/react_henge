@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "name": "LONG GREEN DRESS",
+      "price": "$48.00",
+      "pic1": "col1-1.jpg",
+      "pic2": "col1-2.jpg"
+    },
+    {
+      "name": "GLAM EARRING",
+      "price": "$48.00",
+      "pic1": "col2-1.jpg",
+      "pic2": "col2-2.jpg"
+    },
+    {
+      "name": "ZIPPER RED PANTS",
+      "price": "$48.00",
+      "pic1": "col3-1.jpg",
+      "pic2": "col3-2.jpg"
+    },
+    {
+      "name": "PINK BEANIE",
+      "price": "$48.00",
+      "pic1": "col4-1.jpg",
+      "pic2": "col4-2.jpg"
+    },
+    {
+      "name": "PINK CHECK PANTS",
+      "price": "$48.00",
+      "pic1": "col5-1.jpg",
+      "pic2": "col5-2.jpg"
+    },
+    {
+      "name": "BLAKC LEATHER BAG",
+      "price": "$48.00",
+      "pic1": "col6-1.jpg",
+      "pic2": "col6-2.jpg"
+    },
+    {
+      "name": "LONG SOCKS PACK",
+      "price": "$48.00",
+      "pic1": "col7-1.jpg",
+      "pic2": "col7-2.jpg"
+    },
+    {
+      "name": "BEIGE CROP JACKET",
+      "price": "$48.00",
+      "pic1": "col8-1.jpg",
+      "pic2": "col8-2.jpg"
+    }
+  ]
+}
