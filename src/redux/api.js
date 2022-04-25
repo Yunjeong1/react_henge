@@ -8,7 +8,7 @@ export const getFlickr = async (opt) => {
 	const method_search = 'flickr.photos.search';
 	const username = '195472166@N07';
 	const key = '949d2b707bcfc12c7431235b98a8cab0';
-	const num = 9;
+	const num = 10;
 	let url = '';
 
 	if (opt.type === 'fav') {

@@ -1,5 +1,6 @@
 #visual {
 	width: 100%;
+	height: 100vh;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -9,6 +10,7 @@
 		width: 100%;
 		height: 100%;
 		border: none;
+		object-fit: cover;
 	}
 	.inner {
 		width: 1180px;
@@ -19,12 +21,12 @@
 			letter-spacing: 1px;
 			color: #fff;
 			position: absolute;
-			top: 50%;
-			left: 31%;
-			transform: translate(-50%, -20%);
+			top: 45%;
+			left: 18%;
+			transform: translate(-70%, -20%);
 
 			span {
-				margin-left: 10vw;
+				margin-left: 15vw;
 			}
 		}
 	}

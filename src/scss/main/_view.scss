@@ -1,16 +1,56 @@
 #view {
 	width: 100%;
-	margin-top: 200px;
-	height: 80vh;
+	height: 100vh;
+	position: relative;
 
-	h1 {
-		display: block;
-		font: 35px/1.3 'Oswald';
-		color: #fff;
-		font-weight: 400;
-		letter-spacing: 1px;
-		text-align: center;
-		margin-top: -100px;
-		padding-bottom: 50px;
+	.cover {
+		width: 60%;
+		height: 85vh;
+		position: absolute;
+		top: 100px;
+		right: 0;
+		background: #979b99;
+		padding: 50px 0 50px 80px;
+
+		h1 {
+			font: lighter 80px/1.1 'Helvetica Neue';
+		}
+
+		.txt {
+			display: block;
+			width: 255px;
+			position: absolute;
+			bottom: 80px;
+			right: 80px;
+			p {
+				font: 24px/1.2 'Helvetica 25 UltraLight';
+				color: #242427;
+
+				&.btn {
+					font: 18px/1 'Helvetica 25 UltraLight';
+					margin-top: 60px;
+				}
+			}
+		}
+	}
+
+	.move {
+		article {
+			width: 100%;
+			height: 10%;
+			margin-top: 50px;
+
+			.pic {
+				width: 70%;
+
+				img {
+					width: 100%;
+					height: 65vh;
+					object-fit: cover;
+					filter: brightness(120%);
+					margin-top: 500px;
+				}
+			}
+		}
 	}
 }

@@ -1,7 +1,12 @@
 import React from 'react';
 
-function Visual() {
+function Visual(props) {
 	const path = process.env.PUBLIC_URL;
+
+	const scrolled = props.scrolled;
+	const start = props.posStart;
+	const base = 100;
+	const position = scrolled - start + base;
 
 	return (
 		<figure id='visual' className='myScroll'>
@@ -9,7 +14,7 @@ function Visual() {
 				<source src={`${path}/img/henge.mp4`} type='video/mp4' />
 			</video>
 			<div className='inner'>
-				<h1>
+				<h1 style={{ transform: `translateX(${-position / 1.5}px)` }}>
 					The Metaphysics
 					<br />
 					<span>of Beauty</span>

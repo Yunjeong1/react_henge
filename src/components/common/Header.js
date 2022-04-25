@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Menu from './Menu';
 
 const path = process.env.PUBLIC_URL;
 
@@ -37,11 +38,6 @@ function Header(props) {
 								</li>
 							</div>
 							<div className='li_right'>
-								{/* <li>
-									<NavLink to='/new' activeStyle={active}>
-										New
-									</NavLink>
-								</li> */}
 								<li>
 									<NavLink to='/community' activeStyle={active}>
 										Community

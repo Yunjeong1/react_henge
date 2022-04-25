@@ -1,25 +1,38 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Scrollbar } from 'swiper';
+import { Navigation, Pagination, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const path = process.env.PUBLIC_URL;
 
-function Slider() {
+function Slider(props) {
+	const scrolled = props.scrolled;
+	const start = props.posStart;
+	const base = 500;
+	const position = scrolled - start + base;
+
 	return (
-		<section id='slider' className='myScroll'>
-			<h1>Projects that we made</h1>
+		<section
+			id='slider'
+			className='myScroll'
+			style={{ opacity: position / 15, transition: '0.5s' }}>
+			<h1>HENGE LIFE</h1>
 			<Swiper
-				spaceBetween={30}
-				slidesPerView={2}
-				loop={false}
+				spaceBetween={200}
+				slidesPerView={3}
+				centeredSlides={true}
+				loop={true}
 				scrollbar={{
 					hide: false,
 				}}
 				navigation={true}
-				modules={[Scrollbar, Navigation]}
+				pagination={{
+					clickable: true,
+				}}
+				modules={[Navigation, Pagination, Scrollbar]}
 				breakpoints={{
 					0: {
 						slidesPerView: 1,
@@ -30,8 +43,8 @@ function Slider() {
 						spaceBetween: 30,
 					},
 					1180: {
-						slidesPerView: 4,
-						spaceBetween: 30,
+						slidesPerView: 3,
+						spaceBetween: 200,
 					},
 				}}>
 				<SwiperSlide>
@@ -48,12 +61,6 @@ function Slider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={`${path}/img/solution8.jpg`} alt='pic5' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={`${path}/img/solution6.jpg`} alt='pic6' />
-				</SwiperSlide>
-				<SwiperSlide>
-					<img src={`${path}/img/solution7.jpg`} alt='pic7' />
 				</SwiperSlide>
 				<SwiperSlide>
 					<img src={`${path}/img/solution4.jpg`} alt='pic8' />

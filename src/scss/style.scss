@@ -15,19 +15,18 @@ $mobile: 539px;
 @import './common/footer';
 @import './common/layout';
 @import './common/popup';
+@import './common/menu';
 //main
 @import 'main/visual';
 @import 'main/news';
 @import 'main/vids';
-@import 'main/pics';
 @import 'main/btns';
 @import 'main/slider';
-@import 'main/collection';
 @import 'main/view';
+@import 'main/product';
 //sub
 @import './sub/community';
 @import './sub/gallery';
 @import './sub/contact';
 @import './sub/join';
-@import './sub/new';
 @import './sub/youtube';

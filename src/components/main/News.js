@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function News() {
+function News(props) {
+	const scrolled = props.scrolled;
+	const start = props.posStart;
+	let base = 500;
+	const position = scrolled - start + base;
+
 	const getLocalData = () => {
 		const data = localStorage.getItem('posts');
 
@@ -27,7 +32,10 @@ function News() {
 	}, []);
 
 	return (
-		<section id='news' className='myScroll'>
+		<section
+			id='news'
+			className='myScroll'
+			style={{ opacity: position / 10, transition: '0.5s' }}>
 			<div className='inner'>
 				<div className='tit'>
 					<h1>Recent Posts</h1>

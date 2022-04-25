@@ -27,7 +27,7 @@ function App() {
 	useEffect(() => {
 		dispatch({ type: types.MEMBER.start });
 		dispatch({ type: types.YOUTUBE.start });
-		// dispatch({ type: types.FLICKR.start, opt: { type: 'interest' } });
+		dispatch({ type: types.FLICKR.start, opt: { type: 'fav' } });
 	}, []);
 
 	return (
@@ -46,7 +46,6 @@ function App() {
 			<Route path='/gallery' component={Gallery} />
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/contact' component={Contact} />
-			{/* <Route path='/new' component={New} /> */}
 			<Route path='/community' component={Community} />
 			<Route path='/join' component={Join} />
 
