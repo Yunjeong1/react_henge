@@ -5,7 +5,7 @@ function Visual(props) {
 
 	const scrolled = props.scrolled;
 	const start = props.posStart;
-	const base = 100;
+	const base = 300;
 	const position = scrolled - start + base;
 
 	return (
@@ -14,7 +14,7 @@ function Visual(props) {
 				<source src={`${path}/img/henge.mp4`} type='video/mp4' />
 			</video>
 			<div className='inner'>
-				<h1 style={{ transform: `translateX(${-position / 1.5}px)` }}>
+				<h1 style={{ transform: `translateX(${-position}px)` }}>
 					The Metaphysics
 					<br />
 					<span>of Beauty</span>

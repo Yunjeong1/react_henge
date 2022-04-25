@@ -1,0 +1,36 @@
+.nav_m {
+	width: 280px;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #f0f0f0;
+	z-index: 10;
+
+	padding: 50px 30px;
+
+	> h1 {
+		a {
+			img {
+				width: 180px;
+			}
+		}
+	}
+
+	> #gnb {
+		padding: 20px 15px;
+		li {
+			margin-bottom: 25px;
+			a {
+				color: #333;
+				font: 22px/1 'Helvetica Neue';
+				letter-spacing: 1px;
+				transition: all 0.3s;
+				&:hover {
+					color: #ccc;
+					transition: all 0.2s;
+				}
+			}
+		}
+	}
+}

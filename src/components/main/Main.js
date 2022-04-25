@@ -57,9 +57,11 @@ function Main() {
 		});
 	}, [index]);
 
+	/*
 	useEffect(() => {
 		console.log(scrolled);
 	}, [scrolled]);
+	*/
 
 	return (
 		<main ref={main} id='main'>
