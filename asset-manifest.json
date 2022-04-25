@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react_henge/static/css/main.610dcfa8.css",
-    "main.js": "/react_henge/static/js/main.61fc8f6a.js",
+    "main.css": "/react_henge/static/css/main.831e0815.css",
+    "main.js": "/react_henge/static/js/main.8657b824.js",
     "index.html": "/react_henge/index.html",
-    "main.610dcfa8.css.map": "/react_henge/static/css/main.610dcfa8.css.map",
-    "main.61fc8f6a.js.map": "/react_henge/static/js/main.61fc8f6a.js.map"
+    "main.831e0815.css.map": "/react_henge/static/css/main.831e0815.css.map",
+    "main.8657b824.js.map": "/react_henge/static/js/main.8657b824.js.map"
   },
   "entrypoints": [
-    "static/css/main.610dcfa8.css",
-    "static/js/main.61fc8f6a.js"
+    "static/css/main.831e0815.css",
+    "static/js/main.8657b824.js"
   ]
 }
