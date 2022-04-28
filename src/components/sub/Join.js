@@ -114,7 +114,7 @@ function Join() {
 
 	return (
 		<Layout name={'Join Life'} num={'06'}>
-			<div className='inner2'>
+			<div className='inner1'>
 				{success ? <span>회원가입을 축하합니다!</span> : null}
 
 				<div className='cover'>
@@ -126,50 +126,7 @@ function Join() {
 							<fieldset>
 								<legend className='h'>회원가입양식</legend>
 
-								{/* <div className='group group1'>
-									<h3>
-										<label htmlFor='terms'>1. 약관 동의</label>
-									</h3>
-									<textarea
-										name='terms'
-										id='terms'
-										cols='30'
-										rows='10'
-										defaultValue='Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Facere, sequi nihil aliquid itaque rerum, porro mollitia
-										incidunt reiciendis perspiciatis et unde, iure maiores
-										reprehenderit id fugiat iusto accusantium consequuntur vel
-										veniam optio asperiores. Sint, voluptates doloremque eveniet
-										consequatur quaerat tenetur et tempore dolores modi iure vel
-										officia, fugit facilis nam expedita ad ut ratione. Minima
-										laboriosam quam doloribus, neque corporis repudiandae
-										necessitatibus cum dolore soluta! Rerum corporis rem
-										reiciendis atque neque quibusdam minima praesentium earum,
-										beatae maxime, inventore officiis incidunt cumque quisquam
-										illo commodi doloremque asperiores tempora ratione
-										doloribus. Ea vitae esse laudantium mollitia consequatur
-										accusamus accusantium illum eaque voluptatibus suscipit,
-										sequi cumque asperiores enim repellat! Consequatur fugiat
-										illo impedit? Velit neque reiciendis explicabo provident
-										nisi sint aut ape. doloremque asperiores tempora ratione
-										doloribus. Ea vitae esse laudantium mollitia consequatur
-										accusamus accusantium illum eaque voluptatibus suscipit,
-										sequi cumque asperiores enim repellat! Consequatur fugiat
-										illo impedit? Velit neque reiciendis explicabo provident
-										nisi sint aut ape.'></textarea>
-									<div className='agreement'>
-										<input
-											type='checkbox'
-											name='agree'
-											id='agree'
-											onChange={handleRadio}
-										/>
-										<label htmlFor='agree'>약관에 동의합니다</label>
-										<span className='err'>{err.agree}</span>
-									</div>
-								</div> */}
-
-								<h3>Get in touch with us</h3>
+								<h2>Get in touch with us</h2>
 								<table>
 									<caption className='h'>회원정보 입력 양식 테이블</caption>
 									<tbody>
@@ -355,11 +312,13 @@ function Join() {
 				</div>
 			</div>
 
-			<div className='inner1'>
+			<div className='inner2'>
 				<h2>Our Projects</h2>
 				<div className='wrap'>
 					<article>
-						<img src={`${path}/img/solution1.jpg`} alt='' />
+						<div className='pic'>
+							<img src={`${path}/img/solution1.jpg`} alt='project1' />
+						</div>
 						<div className='text'>
 							<h3>Henge design merged</h3>
 							<p>Sisma Table by Castagna</p>
@@ -372,10 +331,14 @@ function Join() {
 							<p>Sisma Table by Castagna</p>
 							<div className='btn'>view more</div>
 						</div>
-						<img src={`${path}/img/solution2.jpg`} alt='' />
+						<div className='pic'>
+							<img src={`${path}/img/solution2.jpg`} alt='project2' />
+						</div>
 					</article>
 					<article>
-						<img src={`${path}/img/solution3.jpg`} alt='' />
+						<div className='pic'>
+							<img src={`${path}/img/solution3.jpg`} alt='project3' />
+						</div>
 						<div className='text'>
 							<h3>Henge design merged</h3>
 							<p>Sisma Table by Castagna</p>
@@ -388,7 +351,9 @@ function Join() {
 							<p>Sisma Table by Castagna</p>
 							<div className='btn'>view more</div>
 						</div>
-						<img src={`${path}/img/solution5.jpg`} alt='' />
+						<div className='pic'>
+							<img src={`${path}/img/solution5.jpg`} alt='project4' />
+						</div>
 					</article>
 				</div>
 			</div>
