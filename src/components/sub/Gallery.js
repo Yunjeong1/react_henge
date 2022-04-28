@@ -9,14 +9,22 @@ function Gallery() {
 	const { flickr } = useSelector((state) => state.flickrReducer);
 	const dispatch = useDispatch();
 	const [opt, setOpt] = useState({ type: 'fav' });
-	const input = useRef(null);
 
+	const path = process.env.PUBLIC_URL;
+	const input = useRef(null);
+	const frame = useRef(null);
+	const [loading, setLoading] = useState(true);
+	const [enableClick, setEnableClick] = useState(true);
 	const pop = useRef(null);
 	const [index, setIndex] = useState(0);
 
-	useEffect(() => {
-		dispatch({ type: 'FLICKR_START', opt });
-	}, [opt]);
+	const endLoading = () => {
+		setTimeout(() => {
+			frame.current.classList.add('on');
+			setLoading(false);
+			setTimeout(() => setEnableClick(true), 1000);
+		}, 1000);
+	};
 
 	/*
 	const initGallery = () => {
@@ -25,13 +33,32 @@ function Gallery() {
 	*/
 
 	const searchTag = () => {
-		const tag = input.current.value;
+		const tag = input.current.value.trim();
+		if (!tag || tag === '') {
+			alert('검색어를 입력하세요.');
+			return;
+		}
+		if (enableClick) {
+			setEnableClick(false);
+			setLoading(true);
+			frame.current.classList.remove('on');
+		}
 		setOpt({ type: 'search', tags: tag });
+		input.current.value = '';
+		endLoading();
 	};
+
+	useEffect(() => {
+		dispatch({ type: 'FLICKR_START', opt });
+		endLoading();
+	}, [opt]);
 
 	return (
 		<>
 			<Layout name={'Gallery'}>
+				{loading ? (
+					<img className='loading' src={path + '/img/load.gif'} />
+				) : null}
 				<div id='searchBox'>
 					<input
 						type='text'
@@ -49,12 +76,16 @@ function Gallery() {
 							boderBottom: '0px',
 						}}
 					/>
-					<span className='btnSearch' onClick={searchTag}>
+					<span
+						className='btnSearch'
+						onClick={() => {
+							if (enableClick) searchTag();
+						}}>
 						<FontAwesomeIcon icon={faMagnifyingGlass} />
 					</span>
 				</div>
 
-				<ul className='pics'>
+				<ul className='pics' ref={frame}>
 					{flickr.map((item, idx) => {
 						return (
 							<li key={idx}>

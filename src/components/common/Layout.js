@@ -1,19 +1,27 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Layout(props) {
 	let frame = useRef(null);
 
-	useEffect(() => {
-		//console.log('레이아웃 컴포넌트 생성');
-		frame.current.classList.add('on');
+	const cursor = useRef(null);
+	//const [cursorX, setCursorX] = useState(0);
+	//const [cursorY, setCursorY] = useState(0);
 
-		return () => {
-			//console.log('레이아웃 컴포넌트 소멸');
-		};
+	const handleMove = (e) => {
+		cursor.current.style.left = e.clientX + 'px';
+		cursor.current.style.top = e.clientY + 'px';
+	};
+
+	useEffect(() => {
+		frame.current.classList.add('on');
+		window.addEventListener('mousemove', handleMove);
+
+		return () => window.removeEventListener('mousemove', handleMove);
 	}, []);
 
 	return (
 		<section className={`content ${props.name}`} ref={frame}>
+			<figure></figure>
 			<div className='sub_visual'>
 				<div className='inner'>
 					<div className='text'>
@@ -22,6 +30,7 @@ function Layout(props) {
 					</div> */}
 						<div className='title'>
 							<h1>{props.name}</h1>
+							<div className='cursor' ref={cursor}></div>
 						</div>
 					</div>
 				</div>

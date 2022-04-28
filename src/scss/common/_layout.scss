@@ -2,6 +2,19 @@
 	width: 100%;
 	background: #171719;
 
+	.cursor {
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		position: fixed;
+		border-radius: 50px;
+		z-index: 4;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		mix-blend-mode: difference;
+		transition: transform 0.3s;
+	}
+
 	.sub_visual {
 		width: 1180px;
 		margin: 0px auto;
@@ -24,11 +37,16 @@
 			}
 			*/
 			h1 {
+				display: inline-block;
 				font: 150px/1 'open sans';
 				font-weight: 400;
 				color: #fff;
 				letter-spacing: 1px;
 				text-align: left;
+
+				&:hover ~ .cursor {
+					transform: scale(6);
+				}
 			}
 		}
 	}
@@ -66,7 +84,7 @@
 				padding: 0 35px;
 
 				h1 {
-					font: 100px/1 'open sans';
+					font: 80px/1 'open sans';
 				}
 			}
 		}
@@ -79,7 +97,8 @@
 			padding: 0 30px;
 
 			h1 {
-				font: 80px/1 'open sans' !important;
+				font: 15vmin/1 'open sans' !important;
+				margin-left: -35px;
 			}
 		}
 

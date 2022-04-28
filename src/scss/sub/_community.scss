@@ -324,10 +324,10 @@
 			.inner2 {
 				margin-bottom: 100px;
 				article {
-					width: 49%;
-					height: 40vw;
-					margin-right: 2%;
-					margin-bottom: 10px;
+					width: 48%;
+					height: 60vw;
+					margin-right: 4%;
+					margin-bottom: 150px;
 					&:hover {
 						.text {
 							bottom: 30%;
@@ -337,18 +337,23 @@
 					&:nth-of-type(2n) {
 						margin-right: 0;
 					}
-					&:nth-of-type(9) {
-						margin-bottom: 10px;
+
+					.text {
+						margin-top: 20px;
+						h4 {
+							font: 27px/1 'Cormorant Garamond';
+							color: #fff;
+							margin-bottom: 10px;
+						}
+						h5 {
+							display: block;
+							font: lighter 11px/1 'arial';
+							color: #fff;
+							letter-spacing: 0.2em;
+							margin-bottom: 20px;
+						}
 					}
-					&:nth-of-type(10) {
-						margin-bottom: 10px;
-					}
-					&:nth-of-type(11) {
-						margin-bottom: 0;
-					}
-					&:nth-of-type(12) {
-						margin-bottom: 0;
-					}
+
 					h3 {
 						font: lighter 4vmin/1.2 'Cormorant Garamond';
 						margin-top: 25%;
@@ -364,12 +369,15 @@
 @media screen and (max-width: $mobile) {
 	.Community {
 		.inner {
+			padding: 0;
 			h2 {
-				font: 22px/1 'Noto Sans KR';
+				font: 25px/1 'Noto Sans KR';
 				font-weight: 500;
 				letter-spacing: 0;
+				padding-top: 30px;
 			}
 			.cover {
+				padding: 0 30px;
 				.inputBox {
 					width: 100%;
 					margin-right: 0%;
@@ -433,6 +441,7 @@
 
 			.pagination {
 				width: 100%;
+				padding: 0 30px;
 
 				.prev {
 					margin-left: 0vw;
@@ -443,11 +452,13 @@
 			}
 			.inner2 {
 				width: 100%;
+				padding: 0 30px;
+
 				article {
 					width: 100%;
-					height: 75vw;
+					height: 80vw;
 					margin-right: 0%;
-					margin-bottom: 10px;
+					margin-bottom: 180px;
 					.text {
 						bottom: 10%;
 						left: 10%;

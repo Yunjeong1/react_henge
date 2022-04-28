@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Menu = forwardRef((props, ref) => {
 	const [open, setOpen] = useState(false);
-	const active = { color: 'aqua' };
+	const active = { color: '#aaa' };
 
 	useImperativeHandle(ref, () => {
 		return {

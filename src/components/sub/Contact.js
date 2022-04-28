@@ -84,7 +84,7 @@ function Contact() {
 		{
 			title: 'MYEONGDONG, KOREA',
 			address: 'VICENZA ',
-			city: 'VIA GIUSEPPE MAZZINI, 24',
+			city: 'VIA MAZZINI, 24',
 			post: '36040',
 			email: 'Email: info@arredodalpozzo.it',
 			latlng: new kakao.maps.LatLng(37.56250041835499, 126.98516157408622),

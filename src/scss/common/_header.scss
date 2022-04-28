@@ -51,8 +51,8 @@
 		.fa-bars {
 			position: absolute;
 			right: 30px;
-			top: 110px;
-			font-size: 26px;
+			top: 112px;
+			font-size: 25px;
 			color: #fff;
 			cursor: pointer;
 			transition: 0.3s;
@@ -94,6 +94,10 @@
 	#header .inner {
 		> h1 {
 			left: 30px;
+		}
+
+		.fa-bars {
+			font-size: 23px;
 		}
 	}
 }
