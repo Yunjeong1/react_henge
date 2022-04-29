@@ -4,8 +4,6 @@ function Layout(props) {
 	let frame = useRef(null);
 
 	const cursor = useRef(null);
-	//const [cursorX, setCursorX] = useState(0);
-	//const [cursorY, setCursorY] = useState(0);
 
 	const handleMove = (e) => {
 		cursor.current.style.left = e.clientX + 'px';
@@ -24,14 +22,9 @@ function Layout(props) {
 			<figure></figure>
 			<div className='sub_visual'>
 				<div className='inner'>
-					<div className='text'>
-						{/* <div className='small'>
-						<p>Our {props.name}</p>
-					</div> */}
-						<div className='title'>
-							<h1>{props.name}</h1>
-							<div className='cursor' ref={cursor}></div>
-						</div>
+					<div className='title'>
+						<h1>{props.name}</h1>
+						<div className='cursor' ref={cursor}></div>
 					</div>
 				</div>
 			</div>

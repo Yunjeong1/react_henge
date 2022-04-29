@@ -20,22 +20,12 @@
 		margin: 0px auto;
 		position: relative;
 		text-align: center;
-		.text {
+
+		.title {
 			display: flex;
 			margin: 30px auto 100px;
 			box-sizing: border-box;
 
-			/*
-			p {
-				font: 35px/1 'Helvetica Neue 25 UltraLight';
-				font-weight: 400;
-				color: #fff;
-				letter-spacing: 0.5px;
-				text-align: left;
-				padding-right: 100px;
-				box-sizing: border-box;
-			}
-			*/
 			h1 {
 				display: inline-block;
 				font: 150px/1 'open sans';
@@ -83,8 +73,10 @@
 				width: 100%;
 				padding: 0 35px;
 
-				h1 {
-					font: 80px/1 'open sans';
+				.title {
+					h1 {
+						font: 80px/1 'open sans';
+					}
 				}
 			}
 		}
@@ -96,9 +88,13 @@
 		.sub_visual {
 			padding: 0 30px;
 
-			h1 {
-				font: 15vmin/1 'open sans' !important;
-				margin-left: -35px;
+			.title {
+				margin: 30px auto 70px;
+
+				h1 {
+					font: 15vmin/1 'open sans' !important;
+					margin-left: -35px;
+				}
 			}
 		}
 

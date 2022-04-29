@@ -150,6 +150,17 @@ function Contact() {
 
 	return (
 		<Layout name={'Contact'} num={'03'}>
+			<div className='inner inner1'>
+				<h2 className='txt'>
+					ARE YOU COMING BY FOR
+					<br />
+					A VISIT OR SENDING US
+					<br />
+					SOMETHING? YOU CAN FIND
+					<br />
+					OUR ADDRESSES BELOW.
+				</h2>
+			</div>
 			{/* {success ? <h3>전송이 성공적으로 완료되었습니다!</h3> : null}
 			<div className='inner inner1'>
 				<h2>
